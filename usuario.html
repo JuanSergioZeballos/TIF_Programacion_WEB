@@ -7,20 +7,7 @@
     <script>
         function togglePasswordVisibility() {
             const claveInput = document.getElementById("clave");
-            const mostrarBtn = document.getElementById("mostrarBtn");
-            if (claveInput.type === "password") {
-                claveInput.type = "text";
-                mostrarBtn.textContent = "Ocultar";
-            } else {
-                claveInput.type = "password";
-                mostrarBtn.textContent = "Mostrar";
-            }
-        }
-        function validarSoloNumeros(e) {
-            const tecla = e.key;
-            if (!/[0-9]/.test(tecla)) {
-                e.preventDefault();
-            }
+            claveInput.type = claveInput.type === "password" ? "text" : "password";
         }
     </script>
 </head>
@@ -31,8 +18,8 @@
         <input type="text" id="usuario" name="usuario" required><br>
 
         <label for="clave">Clave de Acceso:</label>
-        <input type="password" id="clave" name="clave" onkeypress="validarSoloNumeros(event)" required>
-        <button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
+        <input type="password" id="clave" name="clave" pattern="\d+" required>
+        <button type="button" onclick="togglePasswordVisibility()">Mostrar</button><br>
 
         <input type="submit" value="Registrar Usuario">
     </form>
