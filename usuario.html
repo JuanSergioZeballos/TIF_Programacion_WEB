@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <script>
+        function togglePasswordVisibility() {
+            const claveInput = document.getElementById("clave");
+            const mostrarBtn = document.getElementById("mostrarBtn");
+            if (claveInput.type === "password") {
+                claveInput.type = "text";
+                mostrarBtn.textContent = "Ocultar";
+            } else {
+                claveInput.type = "password";
+                mostrarBtn.textContent = "Mostrar";
+            }
+        }
+        function validarSoloNumeros(e) {
+            const tecla = e.key;
+            if (!/[0-9]/.test(tecla)) {
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registro de Usuarios</h2>
+    <form action="usuarios.pl" method="post">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+
+        <label for="clave">Clave de Acceso:</label>
+        <input type="password" id="clave" name="clave" onkeypress="validarSoloNumeros(event)" required>
+        <button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
+
+        <input type="submit" value="Registrar Usuario">
+    </form>
+</body>
+</html>
