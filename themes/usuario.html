@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <script>
+        function togglePasswordVisibility() {
+            const claveInput = document.getElementById("clave");
+            claveInput.type = claveInput.type === "password" ? "text" : "password";
+        }
+    </script>
+</head>
+<body>
+    <h2>Registro de Usuarios</h2>
+    <form action="usuarios.pl" method="post">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+
+        <label for="clave">Clave de Acceso:</label>
+        <input type="password" id="clave" name="clave" pattern="\d+" required>
+        <button type="button" onclick="togglePasswordVisibility()">Mostrar</button><br>
+
+        <input type="submit" value="Registrar Usuario">
+    </form>
+</body>
+</html>
