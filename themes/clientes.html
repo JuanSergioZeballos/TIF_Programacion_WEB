@@ -5,21 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Registro de Clientes - Banco</title>
+    <script>
+        function registrarYRedirigir() {
+            window.location.href = "tarjetas.html";
+        }
+    </script>
 </head>
 <body>
-    <h2>Registro de Clientes</h2>
+    <h2 align="center">Registro de Clientes</h2>
+    <div align="center" class="completar-Datos">
+        <form action="/registro-cliente" method="post">
+            <div class="input-nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="input-apellido-Paterno">
+                <label for="apellido-Paterno">Apellido Paterno</label>
+                <input type="text" id="apellido-Paterno" name="apellido-Paterno" required>
+            </div>
 
-    <form action="/registro-cliente" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+            <div class="input-apellido-Materno">
+                <label for="apellido-Materno">Apellido Materno</label>
+                <input type="text" id="apellido-Materno" name="apellido-Materno" required>
+            </div>
+            
+            <div>
+                <label for="id-usuario">ID Usuario</label>
+                <input type="email" id="id-usuario" name="id-usuario" required>
+            </div>
 
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
-
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
-
-        <button type="submit">Registrarse<a href="tarjetas.html"></a></button>
-    </form>
+            <div>
+                <button type="button" onclick="registrarYRedirigir()">Registrar Cliente</button>    
+            </div>
+        </form>
+    </div>
+    <p>¿Ya tienes una cuenta? <a href="index.html">Inicia sesión</a></p>
 </body>
 </html>
