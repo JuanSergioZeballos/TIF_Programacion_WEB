@@ -18,17 +18,13 @@ h2 {
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 label {
     margin: 10px 0;
     font-weight: bold;
     color: #555;
 }
+
 
 input {
     width: 100%;
@@ -38,6 +34,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 
 button {
     background-color: #004080;
@@ -49,20 +46,14 @@ button {
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #002b4d;
-}
 
 .registrarse {
     margin-top: 15px;
     color: #555;
 }
 
+
 .registrarse a {
     color: #004080;
     text-decoration: none;
-}
-
-.registrarse a:hover {
-    text-decoration: underline;
 }
