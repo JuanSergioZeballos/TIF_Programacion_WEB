@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5e9df5;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    max-height: 145px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.bank-info {
+    text-align: left;
+}
+
+.description {
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#readMore {
+    cursor: pointer;
+    color: blue;
+}
+
+#fullDescription {
+    display: none;
+}

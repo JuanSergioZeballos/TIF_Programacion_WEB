@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Crédito</title>
+    <link rel="icon" type="image/x.icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd-6r-mLIeu5aDhUBcxB55FeQ9i4iljNGcbQ&usqp=CAU">
+
+</head>
+<body>
+	<div align="center" class="partes-Resgistro">
+        <a href="inicio.html">1</a>
+        <a href="clientes.html">2</a>
+        <a href="tarjetas.html">3</a>
+    </div>
+    <div class="container" align="center">
+        <h1>Banco de Crédito</h1>
+        <div align="center">
+            <h2>Login</h2>
+            <form action="/routes/login.pl" method="post">
+                <label for="user">Usuario:</label>
+                <input type="text" id="user" name="user" required>
+                <br>
+                <label for="secret">Contraseña:</label>
+                <input type="password" id="secret" name="secret" required>
+                <br>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p>¿No tienes cuenta?</p>
+            <a href="clientes.html">Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
+
