@@ -12,38 +12,39 @@
     </script>
 </head>
 <body>
-    <h2 align="center">Registro de Clientes</h2>
-
     <div align="center" class="partes-Resgistro">
         <a href="index.html">1</a>
         <a href="clientes.html">2</a>
         <a href="tarjetas.html">3</a>
     </div>
-    <div align="center" class="completar-Datos">
-        <form action="/registro-cliente" method="post">
-            <div class="input-nombre">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="input-apellido-Paterno">
-                <label for="apellido-Paterno">Apellido Paterno</label>
-                <input type="text" id="apellido-Paterno" name="apellido-Paterno" required>
-            </div>
+    <div class="container" align="center">
+        <h2 align="center">Registro de Clientes</h2>
+        <div align="center" class="completar-Datos">
+            <form action="/registro-cliente" method="post">
+                <div class="input-nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-apellido-Paterno">
+                    <label for="apellido-Paterno">Apellido Paterno</label>
+                    <input type="text" id="apellido-Paterno" name="apellido-Paterno" required>
+                </div>
 
-            <div class="input-apellido-Materno">
-                <label for="apellido-Materno">Apellido Materno</label>
-                <input type="text" id="apellido-Materno" name="apellido-Materno" required>
-            </div>
-            
-            <div>
-                <label for="id-usuario">ID Usuario</label>
-                <input type="number" id="id-usuario" name="id-usuario" required>
-            </div>
+                <div class="input-apellido-Materno">
+                    <label for="apellido-Materno">Apellido Materno</label>
+                    <input type="text" id="apellido-Materno" name="apellido-Materno" required>
+                </div>
+                
+                <div>
+                    <label for="id-usuario">ID Usuario</label>
+                    <input type="number" id="id-usuario" name="id-usuario" required>
+                </div>
 
-            <div>
-                <button type="button" onclick="registrarYRedirigir()">Registrar Cliente</button>    
-            </div>
-        </form>
+                <div>
+                    <button type="button" onclick="registrarYRedirigir()">Registrar Cliente</button>    
+                </div>
+            </form>
+        </div>
     </div>
     <p>¿Ya tienes una cuenta? <a href="index.html">Inicia sesión</a></p>
 </body>
