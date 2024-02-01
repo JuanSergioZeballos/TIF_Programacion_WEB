@@ -42,7 +42,7 @@
                     promise.then(response => response.text())
                     .then(data => {
                         if(data === "OK"){
-                            window.location.href = "./index.html";
+                            window.location.href = "./clientes.html";
                         }else{
                             var element = document.getElementById('errorBox');
                             element.innerHTML = "<p>Error</p>";
