@@ -60,5 +60,12 @@ button {
 
 .opcion-container{
     display: flex;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 200px;
+}
+.imagen-carta{
+    margin-right: 50px;
     text-align: center;
+    text-decoration: none;
 }
