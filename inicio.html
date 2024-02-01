@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="../static/styles/index.css">
     <title>Banco de Crédito</title>
-
 </head>
 <body>
     <nav>
@@ -18,7 +17,9 @@
         <h1>Banco de Crédito</h1>
         <div align="center">
             <h2>Login</h2>
-            <form action="cgi-bin/login.pl" method="post">
+            <div id="errorBox">
+            </div>
+            <form id="loginForm">
                 <label for="user">Usuario:</label>
                 <input type="text" id="user" name="user" required>
                 <br>
@@ -27,6 +28,33 @@
                 <br>
                 <button type="submit">Iniciar Sesión</button>
             </form>
+            <script>
+                const loginForm = document.querySelector("#loginForm");
+                loginForm.addEventListener('submit', evento => {
+                    evento.preventDefault();
+                    const formData = new FormData(loginForm);
+                    
+                    var url = './cgi-bin/login.pl';
+                    var promise = fetch(url, {
+                        method: "post",
+                        body: formData,
+                    });
+                    promise.then(response => response.text())
+                    .then(data => {
+                        if(data === "OK"){
+                            window.location.href = "./index.html";
+                        }else{
+                            var element = document.getElementById('errorBox');
+                            element.innerHTML = "<p>Error</p>";
+                        }
+                        console.log(data);
+                    }).catch(error => {
+                        console.log('Error:', error);
+                    });
+                })
+            </script>
+            <p>¿No tienes cuenta?</p>
+            <a href="clientes.html">Regístrate</a>
         </div>
     </div>
 </body>
