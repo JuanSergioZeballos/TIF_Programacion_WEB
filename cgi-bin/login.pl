@@ -25,7 +25,6 @@ if(defined(my $row = $sth->fetchrow_array)){
     $sth->finish;
     $dbh->disconnect;
 }else{
-    #print $cgi->redirect('../clientes.html');*/
     print "notOK";
     $sth->finish;
     $dbh->disconnect;
