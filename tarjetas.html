@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/styles.css">
-    <title>Registro de Tarjetas</title>
+    <title>Banca por Internet</title>
     <script>
         function togglePasswordVisibility() {
             const cvvInput = document.getElementById("cvv");
@@ -27,22 +27,19 @@
     </script>
 </head>
 <body>
-    <div align="center" class="partes-Resgistro">
-        <a href="clientes.html">1</a>
-        <a href="tarjetas.html">2</a>
-    </div>
     <div class="container" align="center">
-        <h2>Registro de Tarjetas</h2>
+        <h2>Banca por Internet</h2>
         <div class="completar-datos-tarjeta" align="center">
-            <form action="tarjetas.pl" method="post">
+            <form action="movimientos.html" method="post">
                 <label for="numero_tarjeta">Número de Tarjeta:</label>
                 <input type="text" id="numero_tarjeta" name="numero_tarjeta" onkeypress="validarSoloNumeros(event)" maxlength="16" required><br>
-
                 <label for="cvv">Clave:</label>
                 <input type="password" id="cvv" name="cvv" onkeypress="validarSoloNumeros(event)" maxlength="4" required>
                 <button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
-
-                <input type="submit" value="Registrar Tarjeta">
+                <input type="submit" value="Continuar">
+            </form>
+            <form action="AbrirCuenta.html" method="get">
+                <input type="submit" value="Abrir cuenta">
             </form>
         </div>
     </div>
