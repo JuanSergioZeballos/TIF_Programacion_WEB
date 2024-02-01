@@ -1,28 +1,32 @@
-#!/usr/bin/perl
+#!"C:\xampp\perl\bin\perl.exe"
 use strict;
 use warnings;
 use CGI;
 use DBI;
 
-my $db_name   = 'banca';
-my $db_user   = 'max';
-my $db_pass   = '60782999';
-my $db_host   = 'localhost';
-my $dsn = "DBI:mysql:database=$db_name;host=$db_host";
+my $cgi = CGI->new; 
+my $db_name = 'banca';
+my $db_user = 'root';
+my $db_pass = '60782999';
+my $db_host = 'localhost';
+my $dsn = "DBI:mysql:database=$db_name;host=$db_host;port=3306";
 my $dbh = DBI->connect($dsn, $db_user, $db_pass, { RaiseError => 1, PrintError => 0 });
 
-my $user = $cgi->param('usuario');
-my $secret = $cgi->param('clave');
+my $user = $cgi->param('user');
+my $secret = $cgi->param('secret');
 
 my $sql = "SELECT * FROM usuarios WHERE usuario=? AND clave=?";
 my $sth = $dbh->prepare($sql);
-$sth->execute();
+$sth->execute($user, $secret);
 
-if(my $row = $sth->fetchrow_hashref){
+print "Content-Type: text/plain\n\n";
+if(defined(my $row = $sth->fetchrow_array)){
+    print "OK";
+    $sth->finish;
     $dbh->disconnect;
-    print $cgi->redirect('main.html');
 }else{
+    #print $cgi->redirect('../clientes.html');*/
+    print "notOK";
+    $sth->finish;
     $dbh->disconnect;
-    print $cgi->redirect('clientes.html');
 }
-print $cgi->end_html;
