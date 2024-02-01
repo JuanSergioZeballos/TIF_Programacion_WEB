@@ -57,3 +57,8 @@ button {
     color: #004080;
     text-decoration: none;
 }
+
+.opcion-container{
+    display: flex;
+    text-align: center;
+}
