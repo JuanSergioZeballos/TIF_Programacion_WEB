@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/styles.css">
+    <link rel="stylesheet" href="styles/intcli.css">
     <title>Banca por Internet</title>
     <script>
         function togglePasswordVisibility() {
@@ -31,11 +31,13 @@
         <h2>Banca por Internet</h2>
         <div class="completar-datos-tarjeta" align="center">
             <form action="movimientos.html" method="post">
-                <label for="numero_tarjeta">Número de Tarjeta:</label>
-                <input type="text" id="numero_tarjeta" name="numero_tarjeta" onkeypress="validarSoloNumeros(event)" maxlength="16" required><br>
+				<label for="numero_tarjeta">Número de Tarjeta:</label>
+				<input type="text" id="numero_tarjeta" name="numero_tarjeta" onkeypress="validarSoloNumeros(event)" maxlength="16" required><br>
                 <label for="cvv">Clave:</label>
-                <input type="password" id="cvv" name="cvv" onkeypress="validarSoloNumeros(event)" maxlength="4" required>
-                <button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
+				<div>
+					<input type="password" id="cvv" name="cvv" onkeypress="validarSoloNumeros(event)" maxlength="4" required>
+					<button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
+				</div><br>
                 <input type="submit" value="Continuar">
             </form>
             <form action="clientes.html" method="get">
