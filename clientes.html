@@ -35,7 +35,7 @@
             </div>
 
             <div>
-                <button type="button" onclick="registrarYRedirigir()">Registrar Cliente</button>    
+                <button type="button" onclick="if(validar()) registrarYRedirigir()" onclick="validar()">Registrar Cliente</button>    
             </div>
 			<div class="registrarse" align="center">
 				<p>¿Ya tienes una cuenta? 
@@ -44,5 +44,18 @@
 			</div>
         </div>
     </div>
+	<script>
+        function validar() {
+            var apellidop = document.getElementById("apellido-Paterno").value;
+            var apellidom = document.getElementById("apellido-Materno").value;
+			var nombre = document.getElementById("nombre").value;
+            var id = document.getElementById("id-usuario").value;
+            if (nombre === "" || apellidop === "" || apellidom == "" || id == "") {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
