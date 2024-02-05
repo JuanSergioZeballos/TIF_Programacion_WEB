@@ -81,6 +81,10 @@ body{
     cursor: pointer;
 }
 
+#read-more:hover{
+    font-weight: bold;
+}
+
 #full-description{
     display: none;
     padding: 5px;
@@ -89,6 +93,10 @@ body{
 #disguise{
     color: #ff0000;
     cursor: pointer;
+}
+
+#disguise:hover{
+    font-weight: bold;
 }
 
 .container{
