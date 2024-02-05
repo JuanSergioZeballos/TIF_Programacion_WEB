@@ -1,13 +1,21 @@
 body {
     font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+	background-color: rgb(130,142,150);
 }
 
 header {
     color: #000000;
+	background-color:#ffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding:10px;
+	display: flex;
+	margin: 0;
 }
 
 nav ul {
@@ -26,31 +34,11 @@ nav a {
     font-weight: bold;
 }
 
-.main-content {
-    margin-left: auto;
-    max-width: 800px;
-    margin: 100px;
-}
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 80px;
 }
 
-.bank-info {
-    text-align: left;
-}
-
-.description {
-    max-width: 400px;
-}
-
-#readMore {
-    color: blue;
-}
-
-#fullDescription {
-    display: none;
-}
 
 button {
     height: 50px;
@@ -60,8 +48,24 @@ button {
     border-radius: 1rem;
     border: none;
     position: relative;
-    background-image: url('images.jpg');
-    text-decoration: none;  /* Para quitar cualquier subrayado */
-    display: inline-block; /* Para asegurar que no haya saltos de línea al agregar padding o border */
-    padding: 10px 20px;    /* Ajusta el padding según tus necesidades */
+	background-color: #004080;
+    text-decoration: none; 
+    display: inline-block;
+    padding: 10px 20px;  
+	margin-top: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input {
+    width: 200px;
+}
+
+.use{
+	margin-bottom: up;
 }
