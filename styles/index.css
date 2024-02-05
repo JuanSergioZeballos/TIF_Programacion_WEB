@@ -1,71 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-	font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-	background-color: rgb(130,142,150);
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
 }
 
-header {
-    color: #000000;
-	background-color:#ffff;
+body{
+    background-image: url(../data/fondo.jpg);
+    background-size: cover;
+}
+
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px;
-	display: flex;
-	margin: 0;
+    height: 85px;
+    padding: 5px 10%;
 }
 
-nav ul {
-    font-size: 20px;
+.header .nav-links{
     list-style: none;
+}
+
+.header .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover{
+    color: aquamarine;
+}
+
+.header .btn button{
+    font-weight: 500;
+    color: #000;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background: radial-gradient(circle farthest-corner at 10% 20%, #120052 17.8%, #652ec7 100.2%);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.main-content{
+    color: #eceff1;
+    font-size: 20px;
+    align-items: center;
+    padding: 5% 5% 2%;
+    width: 50%;
+}
+
+.main-content h1{
+    font-size: 85px;
+    padding: 60px;
+}
+
+
+#read-more{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#full-description{
+    display: none;
+    padding: 5px;
+}
+
+#disguise{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.container{
     display: flex;
 }
 
-nav ul li {
-    margin-right: 20px; /* Reduzco el margen entre elementos */
+.imagen{
+    margin: auto;
+    margin-top: 150px; 
 }
 
-nav a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-}
-
-h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 80px;
-}
-
-
-button {
-    height: 50px;
-    cursor: pointer;
-    color: #000;
-    font-size: 20px;
-    border-radius: 1rem;
-    border: none;
-    position: relative;
-	background-color: #004080;
-    text-decoration: none; 
-    display: inline-block;
-    padding: 10px 20px;  
-	margin-top: 10px;
-}
-
-label {
-    display: inline-block;
-    width: 150px;
-    text-align: right;
-    margin-right: 10px;
-}
-
-input {
-    width: 200px;
-}
-
-.use{
-	margin-bottom: up;
+.imagen .img{
+    width: 500px;
+    height: auto;
+    border-radius: 2rem;
 }

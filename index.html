@@ -7,39 +7,44 @@
     <title>Tu Banco</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">INICIO</a></li>
-                <li>SOBRE NOSOTROS</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTOS</li>
+                <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="contactos.html">CONTACTOS</a></li>
             </ul>
         </nav>
-        <div class="login">
-            <a href="login.html"><button>Login</button></a>
-        </div>
+        <a class="btn" href="login.html"><button>Login</button></a>
     </header>
-    <section class="main-content">
-        <div class="bank-info">
-            <h1>AMMJ</h1>
-            <p class="description">
-                Bienvenido a nuestro banco, donde la confianza y la excelencia se encuentran. 
-                Con servicios personalizados, tecnología avanzada y un compromiso inquebrantable 
-                con tu éxito financiero, estamos aquí para ser tu socio 
-                de confianza en cada paso de tu camino financiero.
-                <span id="readMore">Read more</span>
-            </p>
-            <div id="fullDescription">
-                <p>"Descubre más sobre nuestros servicios"</p>
-                <p>"Lee nuestra historia y misión"</p>
-                <p>"Obtén información adicional aquí"</p>
+
+    <div class="container">
+        <section class="main-content">
+            <div class="bank-info">
+                <h1>AMMJ</h1>
+                <p class="description">
+                    Bienvenido a nuestro banco, donde la confianza y la excelencia se encuentran. 
+                    Con servicios personalizados, tecnología avanzada y un compromiso inquebrantable 
+                    con tu éxito financiero, estamos aquí para ser tu socio 
+                    de confianza en cada paso de tu camino financiero.
+                </p>
+                <span id="read-more">Leer mas</span>
+                <div id="full-description">
+                    <ul>
+                        <li><strong>Servicio Personalizado:</strong> Adaptamos nuestros servicios a tus necesidades únicas.</li>
+                        <li><strong>Tecnología Avanzada:</strong> Utilizamos las últimas tecnologías para brindarte una experiencia moderna.</li>
+                        <li><strong>Compromiso Inquebrantable:</strong> Nos comprometemos a estar a tu lado en cada paso hacia tu éxito financiero.</li>
+                    </ul>
+                    <span id="disguise">Ocultar</span>
+                </div>
             </div>
+        </section>
+
+        <div class="imagen" align="center">
+            <img class="img" src="./data/img-fondo.png" alt="">
         </div>
-    </section>
-    <figure>
-        <img src="./data/inicio.jpg" alt="">
-    </figure>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
