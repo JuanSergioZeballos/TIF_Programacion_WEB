@@ -1,70 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
-    <title>Banco de Crédito</title>
+    <title>Login</title>
 </head>
-<body>
-    <header>
+<body class="inicio">
+    <header class="header">
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">INICIO</a></li>
-                <li>SOBRE NOSOTROS</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTOS</li>
             </ul>
         </nav>
     </header>
-	<main>
-    <div class="container" align="center">
-        <h1>Banco de Crédito</h1>
-        <div align="center">
-            <h2>Login</h2>
-            <div id="errorBox">
-            </div>
-            <form id="loginForm">
-				<div class="use">
-                <label for="user">Usuario:</label>
-                <input type="text" id="user" name="user" required>
-				<div>
-                <br>
-				<div class="use">
-                <label for="secret">Contraseña:</label>
-                <input type="password" id="secret" name="secret" required>
-				</div>
-                <br>
-                <button type="submit">Iniciar Sesión</button>
-            </form>
-            <script>
-                const loginForm = document.querySelector("#loginForm");
-                loginForm.addEventListener('submit', evento => {
-                    evento.preventDefault();
-                    const formData = new FormData(loginForm);
-                    
-                    var url = './cgi-bin/login.pl';
-                    var promise = fetch(url, {
-                        method: "post",
-                        body: formData,
-                    });
-                    promise.then(response => response.text())
-                    .then(data => {
-                        if(data === "OK"){
-                            window.location.href = "./clientes.html";
-                        }else{
-                            var element = document.getElementById('errorBox');
-                            element.innerHTML = "<p>(!)Usuario no encontrado</p>";
-                        }
-                        console.log(data);
-                    }).catch(error => {
-                        console.log('Error:', error);
-                    });
-                })
-            </script>
+    <div class="opcion-container">
+        <div class="users">
+            <figure>
+                <a href="login-usuario.html"><img class="img-inicio" src="./data/user.jpg" width="200px" alt="cliente"></a>
+                <figcaption>USUARIO</figcaption>
+            </figure>
+        </div>
+        <div class="clients">
+            <figure>
+                <a href="inicioclientes.html"><img class="img-inicio" src="./data/client.png" width="200px" alt="cliente" ></a>
+                    <figcaption>CLIENTE</figcaption>
+            </figure>
         </div>
     </div>
-	</main>
 </body>
 </html>
-
+</html>
