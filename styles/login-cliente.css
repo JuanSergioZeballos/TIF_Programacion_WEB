@@ -156,7 +156,7 @@ body{
     transform: translateY(-300%);
 }
 
-#error-box {
+.error-box {
     display: none;
     background-color: red;
     padding: 10px;
