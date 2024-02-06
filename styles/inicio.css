@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-image: url(../data/fondo.jpg);
+    background-size: cover;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px;
+	background-color: #ffffff;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover{
+    color: aquamarine;
+}
+
+.header .btn button{
+    font-weight: 500;
+    color: #000;
+    padding: 9px 9px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background: radial-gradient(circle farthest-corner at 10% 20%, #120052 17.8%, #652ec7 100.2%);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.main-content{
+    color: #eceff1;
+    font-size: 20px;
+    align-items: center;
+    padding: 5% 5% 2%;
+    width: 50%;
+}
+
+.main-content h1{
+    font-size: 85px;
+    padding: 60px;
+}
+
+
+#read-more{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#read-more:hover{
+    font-weight: bold;
+}
+
+#full-description{
+    display: none;
+    padding: 5px;
+}
+
+#disguise{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#disguise:hover{
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+}
+
+.imagen{
+    margin: auto;
+    margin-top: 150px; 
+}
+
+.imagen .img{
+    width: 500px;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.inicio{
+    background: linear-gradient(to right, rgb(131,148,167) 50%, rgb(147,162,176) 50%);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcion-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 200px;
+    justify-content: space-around;
+}
+.imagen-carta{
+    margin-right: 50px;
+    text-align: center;
+    text-decoration: none;
+	align-items: center;
+}
+
+.users,
+.clients {
+    flex: 1;
+    text-align: center;
+	margin-right: 300px;
+	margin-bottom: 200px;
+    text-decoration: none;
+}
+
+.img-inicio{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-inicio:hover{
+    transform: scale(1.1);
+}
+
+figcaption{
+    font-style: italic;
+	font-weight: bold;
+    font-size: 30px;
+}
