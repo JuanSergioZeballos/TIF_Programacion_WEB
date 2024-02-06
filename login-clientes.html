@@ -29,7 +29,7 @@
                     <i class='bx bxl-linkedin' ></i>
                 </div>
                 <p>o Iniciar Sesión con una Cuenta</p>
-                <div id="error-box">
+                <div class="error-box" id="login-error-box">
                 </div>
                 <form class="form" id="login-form">
                     <label>
@@ -58,7 +58,7 @@
                             if(data === "OK"){
                                 window.location.href = "./bank.html";
                             }else{
-                                var element = document.getElementById('error-box');
+                                var element = document.getElementById('login-error-box');
                                 element.style.display = 'block';
                                 element.innerHTML = "<p>Error</p>";
                                 element.innerHTML = "<p>(!) Usuario o contraseña no encontrados</p>";
@@ -91,7 +91,9 @@
                     <i class='bx bxl-linkedin' ></i>
                 </div>
                 <p>o usa tu email para registrarte</p>
-                <form class="form" id="login-form">
+                <div class="error-box" id="register-error-box">
+                </div>
+                <form class="form" id="register-form">
                     <label>
                         <i class='bx bxs-user'></i>
                         <input type="text" placeholder="Nombre Completo">
@@ -106,6 +108,33 @@
                     </label>
                     <input type="submit" value="Registrarse">
                 </form>
+                <script>
+                    const registerForm = document.querySelector("#register-form");
+                    registerForm.addEventListener('submit', evento => {
+                        evento.preventDefault();
+                        const formData = new FormData(registerForm);
+                        
+                        var url = './cgi-bin/register-cliente.pl';
+                        var promise = fetch(url, {
+                            method: "post",
+                            body: formData,
+                        });
+                        promise.then(response => response.text())
+                        .then(data => {
+                            if(data === "OK"){
+                                window.location.href = "./bank.html";
+                            }else{
+                                var element = document.getElementById('login-error-box');
+                                element.style.display = 'block';
+                                element.innerHTML = "<p>Error</p>";
+                                element.innerHTML = "<p>(!) Usuario o contraseña no encontrados</p>";
+                            }
+                            console.log(data);
+                        }).catch(error => {
+                            console.log('Error:', error);
+                        });
+                    })
+                </script>
             </div>
         </div>
     </div>
