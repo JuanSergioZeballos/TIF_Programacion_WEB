@@ -50,4 +50,25 @@ h2 {
 input {
 	border-radius:5px;
 }
-		
+
+.cont {
+	border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+	width: 400px;
+}
+
+.clie	{
+	border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+	width: 400px;
+}
