@@ -155,3 +155,10 @@ body{
     position: absolute;
     transform: translateY(-300%);
 }
+
+#error-box {
+    display: none;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+  }

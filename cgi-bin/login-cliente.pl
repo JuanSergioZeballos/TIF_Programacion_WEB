@@ -12,10 +12,10 @@ my $db_host = 'localhost';
 my $dsn = "DBI:mysql:database=$db_name;host=$db_host;port=3306";
 my $dbh = DBI->connect($dsn, $db_user, $db_pass, { RaiseError => 1, PrintError => 0 });
 
-my $user = $cgi->param('user');
-my $secret = $cgi->param('secret');
+my $user = $cgi->param('email');
+my $secret = $cgi->param('password');
 
-my $sql = "SELECT * FROM usuarios WHERE usuario=? AND clave=?";
+my $sql = "SELECT * FROM clientes WHERE correo=? AND dni=?";
 my $sth = $dbh->prepare($sql);
 $sth->execute($user, $secret);
 
