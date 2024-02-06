@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 20px;
+}
+
+body{
+    background-color:azure;
+}
+
+.header{
+    background-color: #0f1618;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+}
+
+.header .nav-links{
+    display: inline-flex;
+    list-style: none;
+}
+
+.header .nav-links li{
+    padding: 0 20px;    
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.05);
+}
+
+.header .nav-links a{
+    font-size: 15px;
+    color: #eceff1;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;  
+}
+
+.header .nav-links li a:hover,
+.header .nav-links li a.active{
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.buttons{
+    margin-left: 250px;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #cdcdcd;
+    padding: 9px 25px;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: #cdcdcd;
+}
+
+.header .banca button{
+    color: #cdcdcd;
+    background: #291057;
+}
+
+.header .banca button:hover{
+    background: #6924a5;
+}
