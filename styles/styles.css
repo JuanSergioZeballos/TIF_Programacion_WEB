@@ -1,75 +1,106 @@
-body {
+*{
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+}
+
+body {
 	background-image:url('https://media.istockphoto.com/id/1203763961/es/foto/tarjetas-de-cr%C3%A9dito-apiladas.jpg?s=612x612&w=0&k=20&c=IV-cMMnyIoQJg0SQRKNEgbKbyamDeRo_fo-dKzsJdpU=');
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	background-size:100% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100vh;
 }
 
-.container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 400px;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
 }
 
-h2 {
-    color: #333;
+.header .nav-links{
+    list-style: none;
 }
 
-
-label {
-    margin: 10px 0;
-    font-weight: bold;
-    color: #555;
+.header .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
 }
 
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.header .nav-links li:hover{
+    transform: scale(1.1);
 }
 
+.header .nav-links a{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
 
-button {
-    background-color: #004080;
+.header .nav-links li a:hover{
+    color: aquamarine;
+}
+
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: #000;
     color: #fff;
-    padding: 10px 20px;
+    left: 30%;
+    position: absolute;
+    transform: translate(50%, 50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.login-box .logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login-box h1, h2{
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box label{
+    font-weight: bold;
+    display: block;
+}
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"]{
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
     font-size: 16px;
 }
 
-
-.registrarse {
-    margin-top: 15px;
-    color: #555;
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
 }
 
-
-.registrarse a {
-    color: #004080;
-    text-decoration: none;
-}
-
-.opcion-container{
-    display: flex;
-    align-items: center;
-    margin-left: 300px;
-    margin-top: 200px;
-}
-.imagen-carta{
-    margin-right: 50px;
-    text-align: center;
-    text-decoration: none;
+.login-box input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Banco de Crédito</title>
+    <script src="./js/login-usuario.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="contactos.html">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="login-box">
+            <img src="./data/logo.jpg" class="logo" alt="Logo image">
+            <h1>Banco de Crédito</h1>
+            <div class="content">
+                <div id="error-box"></div>
+                <h2>Login</h2>
+                <form id="login-form">
+
+                    <label for="username">Usuario:</label>
+                    <input type="text" name="username" placeholder="Ingrese su usuario">
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" placeholder="Ingrese su contraseña">
+
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
