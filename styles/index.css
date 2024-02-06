@@ -36,7 +36,7 @@ body{
 }
 
 .header .nav-links a{
-    font-size: 700;
+    font-size: 25px;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
@@ -112,4 +112,52 @@ body{
     width: 500px;
     height: auto;
     border-radius: 2rem;
+}
+
+.inicio{
+    background: linear-gradient(to right, rgb(131,148,167) 50%, rgb(147,162,176) 50%);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcion-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 200px;
+    justify-content: space-around;
+}
+.imagen-carta{
+    margin-right: 50px;
+    text-align: center;
+    text-decoration: none;
+	align-items: center;
+}
+
+.users,
+.clients {
+    flex: 1;
+    text-align: center;
+	margin-right: 300px;
+	margin-bottom: 200px;
+    text-decoration: none;
+}
+
+.img-inicio{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-inicio:hover{
+    transform: scale(1.1);
+}
+
+figcaption{
+    font-style: italic;
+	font-weight: bold;
+    font-size: 30px;
 }
