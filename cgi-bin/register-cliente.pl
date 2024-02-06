@@ -12,24 +12,23 @@ my $db_host = 'localhost';
 my $dsn = "DBI:mysql:database=$db_name;host=$db_host;port=3306";
 my $dbh = DBI->connect($dsn, $db_user, $db_pass, { RaiseError => 1, PrintError => 0 });
 
-my $name = $cgi->param('name');
-my $password = $cgi->param('password');
-my $email = $cgi->param('email');
+my $name = $cgi->param('name2');
+my $email = $cgi->param('email2');
+my $password = $cgi->param('password2');
 
-print "$name,$password,$email";
+my @name_parts = split(/\s+/, $name);
 
-my @name_parts = split(/\s+/, $nombreCompleto);
-
-if (@nombre_parts < 3) {
+if (@name_parts < 3) {
     print "Content-Type: text/plain\n\n";
     print "nameNotOk";
-    die;
+    $dbh->disconnect;
+    die; 
 }
-my ($nombre, $apellido_paterno, $apellido_materno) = @nombre_parts;
+my ($nombre, $paterno, $materno) = @name_parts;
 
 my $sql = "INSERT INTO clientes (nombre, paterno, materno, correo, dni) VALUES (?, ?, ?, ?, ?)";
 my $sth = $dbh->prepare($sql);
-$sth->execute($nombre, $apellido_paterno, $apellido_materno, $email, $password);
+$sth->execute($nombre, $paterno, $materno, $email, $password);
 
 print "Content-Type: text/plain\n\n";
 print "OK";

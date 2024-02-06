@@ -56,11 +56,11 @@
                         promise.then(response => response.text())
                         .then(data => {
                             if(data === "OK"){
+                                element.style.display = 'none';
                                 window.location.href = "./bank.html";
                             }else{
                                 var element = document.getElementById('login-error-box');
                                 element.style.display = 'block';
-                                element.innerHTML = "<p>Error</p>";
                                 element.innerHTML = "<p>(!) Usuario o contraseña no encontrados</p>";
                             }
                             console.log(data);
@@ -96,15 +96,15 @@
                 <form class="form" id="register-form">
                     <label>
                         <i class='bx bxs-user'></i>
-                        <input type="text" id="name" placeholder="Nombre Completo">
+                        <input type="text" name="name2" placeholder="Nombre Completo">
                     </label>
                     <label>
                         <i class='bx bxs-envelope' ></i>
-                        <input type="email" id="email" placeholder="Correo Electrónico">
+                        <input type="email" name="email2" placeholder="Correo Electrónico">
                     </label>
                     <label>
                         <i class='bx bxs-lock-alt' ></i>
-                        <input type="password" id="password" placeholder="DNI (Contraseña)">
+                        <input type="password" name="password2" placeholder="DNI (Contraseña)">
                     </label>
                     <input type="submit" value="Registrarse">
                 </form>
@@ -114,21 +114,21 @@
                         evento2.preventDefault();
                         const formData2 = new FormData(registerForm);
                         var url2 = './cgi-bin/register-cliente.pl';
-                        var promise = fetch(url2, {
+                        var promise2 = fetch(url2, {
                             method: "post",
                             body: formData2,
                         });
-                        promise.then(response => response.text())
+                        promise2.then(response => response.text())
                         .then(data => {
                             if(data === "OK"){
-                                var divElement = document.getElementById("register-error-box");
-                                divElement.style.backgroundColor = "cyan";
-                                element.style.display = 'block';
+                                var divElement = document.getElementById('register-error-box');
+                                divElement.style.backgroundColor = 'cyan';
+                                divElement.style.display = 'block';
                                 divElement.innerHTML = "<p>Usuario registrado correctamente, inicie sesión con su nueva cuenta</p>"
                             }else{
-                                var element = document.getElementById('login-error-box');
-                                element.style.display = 'block';
-                                element.innerHTML = "<p>(!) Ha ocurrido un error al registrarse, por favor revise sus datos</p>";
+                                var divElement = document.getElementById('register-error-box');
+                                divElement.style.display = 'block';
+                                divElement.innerHTML = "<p>(!) Ha ocurrido un error al registrarse, por favor revise sus datos</p>";
                             }
                             console.log(data);
                         }).catch(error => {
