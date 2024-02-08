@@ -1,9 +1,13 @@
-esed<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/intcli.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/login-banca.css">
     <title>Banca por Internet</title>
     <script>
         function togglePasswordVisibility() {
@@ -27,22 +31,29 @@ esed<!DOCTYPE html>
     </script>
 </head>
 <body>
-    <div class="container" align="center">
-        <h2>Banca por Internet</h2>
-        <div class="completar-datos-tarjeta" align="center">
-            <form action="movimientos.html" method="post">
-				<label for="numero_tarjeta">Número de Tarjeta:</label>
-				<input type="text" id="numero_tarjeta" name="numero_tarjeta" onkeypress="validarSoloNumeros(event)" maxlength="16" required><br>
-                <label for="cvv">Clave:</label>
-				<div>
-					<input type="password" id="cvv" name="cvv" onkeypress="validarSoloNumeros(event)" maxlength="4" required>
-					<button type="button" id="mostrarBtn" onclick="togglePasswordVisibility()">Mostrar</button><br>
-				</div><br>
-                <input class="cont" type="submit" value="Continuar">
-            </form>
-            <form action="clientes.html" method="get">
-                <input class="clie" type="submit" value="Abrir cuenta">
-            </form>
+    <div class="container">
+        <div class="information">
+            <img src="./data/fondo-banca.jpg" alt="imagen">
+        </div>
+        <div class="form-information">
+            <div class="volver">
+                <label>
+                    <i class='bx bx-chevrons-left'></i>
+                    <a href="bank.html">Atras</a>
+                </label>
+            </div>
+            <h2>Banca por Internet</h2>
+            <div class="completar-datos-tarjeta">
+                <form class="form" id="login-form">
+                    <label>
+                        <input type="number" name="number" placeholder="Número de Tarjeta">
+                    </label>
+                    <label>
+                        <input type="password" name="password" placeholder="Clave de 6 dígitos">
+                    </label>
+                    <input type="submit" value="Continuar">
+                </form>
+            </div>
         </div>
     </div>
 </body>

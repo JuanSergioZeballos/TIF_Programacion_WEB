@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image:url('https://media.istockphoto.com/id/1203763961/es/foto/tarjetas-de-cr%C3%A9dito-apiladas.jpg?s=612x612&w=0&k=20&c=IV-cMMnyIoQJg0SQRKNEgbKbyamDeRo_fo-dKzsJdpU=');
+	background-image:url(../data/fondo-login-clientes.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
     height: 100vh;
