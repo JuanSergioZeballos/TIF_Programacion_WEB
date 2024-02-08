@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bank.css">
     <title>Mi Cuenta</title>
 </head>
 <body>
-    <div><h1>JMMA</h1></div>
-    <div>Dinero</div>
-    <div>Transferencias</div>
-</body>
+    <header class="header">
+        <img src="./data/LOGO.png" alt="logo">
+        <nav>
+          <ul>
+            <div class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Transferencias</a></li>
+                <li><a href="#">Pagos</a></li>
+                <li><a href="#">Mas Opereaciones</a></li>
+            </div>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <h1>INFORMACION DE MI CUENTA</h1>
+      <div class="information-cuenta">
+        <div class="saldo">
+          <h2>Saldo actual</h2>
+        </div>
+
+        <div class="transacciones">
+          <h2>Transacciones Recientes</h2>
+          <ul>
+            <li>Compra en tienda de comestibles - $50</li>
+            <li>Pago de factura de electricidad - $100</li>
+            <li>Transferencia recibida - $200</li>
+          </ul>
+        </div>
+
+        <div class="configuracion">
+          <h2>Configuracion de la Cuenta</h2>
+          <ul>
+            <li>Cambiar contraseña</li>
+            <li>Actualizar información personal</li>
+            <li>Configurar notificaciones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

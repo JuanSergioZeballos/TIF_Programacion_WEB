@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color:azure;
+    background: linear(to bottom, #ffffff 50%, #e7fcff 50%);
 }
 
 .header{
@@ -83,4 +83,79 @@ body{
 
 .header .banca button:hover{
     background: #6924a5;
+}
+
+/* Estilos del contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 20px; /* Añadido para espaciado */
+}
+
+.container h1 {
+    margin-left: 0; /* Cambiado para alineación con el resto del contenido */
+    margin-top: 70px;
+    font-size: 30px;
+}
+
+/* Estilos de la información de la cuenta */
+.information-cuenta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Añadido para espaciado */
+}
+
+.information-cuenta > div {
+    width: calc(50% - 10px); /* Dividir en dos columnas con espacio entre ellos */
+}
+
+/* Estilos del saldo */
+.information-cuenta .saldo {
+    height: auto; /* Cambiado para adaptarse al contenido */
+    padding: 20px; /* Aumentado para mejor aspecto */
+    margin-bottom: 20px; /* Añadido para espacio entre elementos */
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de las transacciones */
+.information-cuenta .transacciones {
+    padding: 20px; /* Añadido para mejor aspecto */
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #cdcdcd; /* Cambiado para mejor claridad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregamos sombreado */
+}
+
+.information-cuenta .transacciones ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.information-cuenta .transacciones ul li {
+    padding: 5px 0;
+}
+
+/* Estilos de la configuración */
+.information-cuenta .configuracion {
+    padding: 20px; /* Añadido para mejor aspecto */
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #cdcdcd; /* Cambiado para mejor claridad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregamos sombreado */
+}
+
+.information-cuenta .configuracion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.information-cuenta .configuracion ul li {
+    padding: 5px 0;
 }
