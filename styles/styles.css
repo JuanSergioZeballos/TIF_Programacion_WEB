@@ -107,3 +107,10 @@ body {
     background: #ffc107;
     color: #000;
 }
+
+.error-box {
+    display: none;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+  }
