@@ -26,9 +26,9 @@ if (@name_parts < 3) {
 }
 my ($nombre, $paterno, $materno) = @name_parts;
 
-my $sql = "INSERT INTO clientes (nombre, paterno, materno, correo, dni) VALUES (?, ?, ?, ?, ?)";
+my $sql = "INSERT INTO clientes (nombres, paterno, materno, correo, dni, usuario_id) VALUES (?, ?, ?, ?, ?, ?)";
 my $sth = $dbh->prepare($sql);
-$sth->execute($nombre, $paterno, $materno, $email, $password);
+$sth->execute($nombre, $paterno, $materno, $email, $password, 1);
 
 print "Content-Type: text/plain\n\n";
 print "OK";
