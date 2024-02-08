@@ -2,8 +2,8 @@ const loginForm = document.querySelector("#login-form");
 loginForm.addEventListener('submit', evento => {
     evento.preventDefault();
     const formData = new FormData(loginForm);
-    
-    var url = './cgi-bin/login.pl';
+                        
+    var url = './cgi-bin/login-usuario.pl';
     var promise = fetch(url, {
         method: "post",
         body: formData,
@@ -12,7 +12,7 @@ loginForm.addEventListener('submit', evento => {
     .then(data => {
         if(data === "OK"){
             window.location.href = "./clientes.html";
-        } else {
+        }else{
             var element = document.getElementById('error-box');
             element.innerHTML = "<p>(!) Usuario no encontrado</p>";
         }
@@ -20,4 +20,4 @@ loginForm.addEventListener('submit', evento => {
     }).catch(error => {
         console.log('Error:', error);
     });
-});
+})

@@ -22,10 +22,9 @@
             <img src="./data/logo.jpg" class="logo" alt="Logo image">
             <h1>Banco de Crédito</h1>
             <div class="content">
-                <div id="error-box"></div>
                 <h2>Login</h2>
+                <div class="error-box" id="error-box"></div>
                 <form id="login-form">
-
                     <label for="username">Usuario:</label>
                     <input type="text" name="username" placeholder="Ingrese su usuario">
 
@@ -51,7 +50,7 @@
                                 window.location.href = "./clientes.html";
                             }else{
                                 var element = document.getElementById('error-box');
-                                element.innerHTML = "<p>Error</p>";
+                                element.style.display = 'block';
                                 element.innerHTML = "<p>(!) Usuario no encontrado</p>";
                             }
                             console.log(data);
@@ -59,6 +58,7 @@
                             console.log('Error:', error);
                         });
                     })
+
                 </script>
             </div>
         </div>
